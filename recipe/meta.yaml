@@ -1,4 +1,4 @@
-{% set version = '0.2.0' %}
+{% set version = "0.2.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://github.com/SantanderMetGroup/geoprocessoR/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: bd38fa76d144f990aaf3c3445479ff5c7dcf3adc568dc3997fc98ae94459babe
+  sha256: f2d33e60519e2bfce5c2fd25bc83d31048089a0588787f9be4421133f6287db0
 
 build:
-  merge_build_host: True  # [win]
-  number: 2
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -58,7 +58,7 @@ extra:
   recipe-maintainers:
     - conda-forge/r
     - cofinoa
-    
+
 
 # Package: geoprocessoR
 # Depends: R(>= 3.1.0), transformeR(>= 1.6.1),
